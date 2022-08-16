@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom'
-
+import { client } from '../../../service/client'
+import { useEffect, useState } from 'react'
 const List = () => {
-  const items = [
-    { id: 1, nome: 'filme 1' },
-    { id: 2, nome: 'filme2' },
-    { id: 3, nome: 'filme3' }
-  ]
+  const [items, setItems] = useState([])
+
+  useEffect(() => {
+    client.get('http://localhost:9000/movie')
+      .then(response => {
+        setItems(response.data)
+      })
+  }, [])
 
   return (
     <ul>
