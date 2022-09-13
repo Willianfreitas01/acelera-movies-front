@@ -48,3 +48,16 @@
   font-size: 20px;
   cursor: pointer;
 }
+.open{
+  background-color: rgba(5, 5, 119, 0.805);
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer; 
+  border-radius: 2%;
+  margin-left: 43%;
+  margin-right: 43%;
+  width: 150px;
+  height: 20px;
+  margin-top: 10px;
+
+}
